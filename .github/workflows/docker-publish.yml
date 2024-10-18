@@ -27,7 +27,7 @@ jobs:
         with:
           context: ./src/ai-service
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: rodrigof22/ask-store-demo
 
       - name: Log out from DockerHub
         run: docker logout
@@ -53,7 +53,7 @@ jobs:
         with:
             context: ./src/makeline-service
             push: true
-            tags: rodrigof22/ask-store-demo:latest
+            tags: rodrigof22/ask-store-demo
 
       - name: Log out from DockerHub
         run: docker logout
@@ -79,7 +79,7 @@ jobs:
         with:
           context: ./src/order-service
           push: true
-          tags: rodrigof22/ask-stroe-demo:latest
+          tags: rodrigof22/ask-stroe-demo
 
       - name: Log out from DockerHub
         run: docker logout
@@ -105,7 +105,7 @@ jobs:
         with:
           context: ./src/product-service
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: rodrigof22/ask-store-demo
 
       - name: Log out from DockerHub
         run: docker logout
@@ -131,7 +131,7 @@ jobs:
         with:
           context: ./src/store-admin
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: rodrigof22/ask-store-demo
 
       - name: Log out from DockerHub
         run: docker logout
@@ -157,7 +157,7 @@ jobs:
         with:
           context: ./src/store-front
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: rodrigof22/ask-store-demo
 
       - name: Log out from DockerHub
         run: docker logout
@@ -183,7 +183,7 @@ jobs:
         with:
           context: ./src/virtual-customer
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: rodrigof22/ask-store-demo
 
       - name: Log out from DockerHub
         run: docker logout
@@ -209,7 +209,7 @@ jobs:
         with:
           context: ./src/virtual-worker
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: rodrigof22/ask-store-demo
 
       - name: Log out from DockerHub
         run: docker logout
