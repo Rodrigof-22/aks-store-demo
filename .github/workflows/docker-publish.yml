@@ -27,7 +27,7 @@ jobs:
         with:
           context: ./src/ai-service
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ai-service:latest
 
       - name: Log out from DockerHub
         run: docker logout
@@ -45,15 +45,15 @@ jobs:
       - name: Log in to DockerHub
         uses: docker/login-action@v1
         with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push Docker image for makeline-service
         uses: docker/build-push-action@v2
         with:
-            context: ./src/makeline-service
-            push: true
-            tags: rodrigof22/ask-store-demo:latest
+          context: ./src/makeline-service
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/makeline-service:latest
 
       - name: Log out from DockerHub
         run: docker logout
@@ -79,7 +79,7 @@ jobs:
         with:
           context: ./src/order-service
           push: true
-          tags: rodrigof22/ask-stroe-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest
 
       - name: Log out from DockerHub
         run: docker logout
@@ -105,7 +105,7 @@ jobs:
         with:
           context: ./src/product-service
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/product-service:latest
 
       - name: Log out from DockerHub
         run: docker logout
@@ -131,7 +131,7 @@ jobs:
         with:
           context: ./src/store-admin
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/store-admin:latest
 
       - name: Log out from DockerHub
         run: docker logout
@@ -157,7 +157,7 @@ jobs:
         with:
           context: ./src/store-front
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/store-front:latest
 
       - name: Log out from DockerHub
         run: docker logout
@@ -183,7 +183,7 @@ jobs:
         with:
           context: ./src/virtual-customer
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/virtual-customer:latest
 
       - name: Log out from DockerHub
         run: docker logout
@@ -209,7 +209,7 @@ jobs:
         with:
           context: ./src/virtual-worker
           push: true
-          tags: rodrigof22/ask-store-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/virtual-worker:latest
 
       - name: Log out from DockerHub
         run: docker logout
