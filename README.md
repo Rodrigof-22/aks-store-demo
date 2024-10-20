@@ -146,3 +146,6 @@ See the [Azure Developer CLI](./docs/azd.md) documentation for instructions on h
 
 - AKS Documentation. https://learn.microsoft.com/azure/aks
 - Kubernetes Learning Path. https://azure.microsoft.com/resources/kubernetes-learning-path 
+
+
+Teste para ver se o Argo CD está bem configurado
