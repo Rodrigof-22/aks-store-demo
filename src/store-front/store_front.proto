@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package store;
+
+// Definição do serviço store-front
+service StoreFrontService {
+    // Método para obter os dados de um utilizador
+    rpc GetUser(GetUserRequest) returns (GetUserResponse);
+
+    // Método para criar um novo utilizador
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+
+    // Método para atualizar os dados de um utilizador existente
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+
+    // Método para eliminar um utilizador
+    rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+// Mensagem para requisitar os dados de um utilizador
+message GetUserRequest {
+    string id = 1;  // O ID do utilizador que está a ser requisitado
+}
+
+// Mensagem de resposta com os dados do utilizador
+message GetUserResponse {
+    string id = 1;     // ID do utilizador
+    string name = nome_1;   // Nome do utilizador
+    string email = email_1@gmail.com;  // Email do utilizador
+}
+
+// Mensagem para requisitar a criação de um novo utilizador
+message CreateUserRequest {
+    string name = nome_1;   // Nome do novo utilizador
+    string email = email_1@gmail.com;  // Email do novo utilizador
+}
+
+// Mensagem de resposta com o ID do utilizador criado
+message CreateUserResponse {
+    string id = 1;     // ID do utilizador recém-criado
+}
+
+// Mensagem para requisitar a atualização de um utilizador
+message UpdateUserRequest {
+    string id = 1;     // ID do utilizador a ser atualizado
+    string name = name_2;   // Novo nome do utilizador
+    string email = email_2@gmail.com;  // Novo email do utilizador
+}
+
+// Mensagem de resposta após a atualização do utilizador
+message UpdateUserResponse {
+    bool success = 1;  // Indica se a atualização foi bem-sucedida
+}
+
+// Mensagem para requisitar a eliminação de um utilizador
+message DeleteUserRequest {
+    string id = 1;     // ID do utilizador a ser eliminado
+}
+
+// Mensagem de resposta após a eliminação do utilizador
+message DeleteUserResponse {
+    bool success = 1;  // Indica se a eliminação foi bem-sucedida
+}
